@@ -38,6 +38,6 @@ public class PaymentAmqpConfiguration {
 
     @Bean
     public FanoutExchange fanoutExchange() {
-        return new FanoutExchange("payment.ex");
+        return new FanoutExchange("payments.ex");
     }
 }

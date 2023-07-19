@@ -52,7 +52,7 @@ public class PaymentController {
         PaymentDTO paymentDTO = service.createPayment(dto);
         URI endereco = uriBuilder.path("/payments/{id}").buildAndExpand(paymentDTO.getId()).toUri();
 
-        rabbitTemplate.convertAndSend("payment.ex","",paymentDTO);
+        rabbitTemplate.convertAndSend("payments.ex","",paymentDTO);
         return ResponseEntity.created(endereco).body(paymentDTO);
     }
 
