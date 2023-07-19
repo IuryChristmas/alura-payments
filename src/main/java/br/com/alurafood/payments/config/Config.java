@@ -2,9 +2,10 @@ package br.com.alurafood.payments.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-@org.springframework.context.annotation.Configuration
-public class Configuration {
+@Configuration
+public class Config {
 
     @Bean
     public ModelMapper getModelMapper() {
